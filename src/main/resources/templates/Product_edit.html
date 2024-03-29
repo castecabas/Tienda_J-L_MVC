@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang='en' xmlns:th='http://www.thymeleaf.org'>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Producto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://wallpapers.com/images/featured/red-mountain-hl3tltk7i8c7swqg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        div.container {
+            text-align: center;
+            height: 550px;
+            width: 330px;
+            margin: 0 auto;
+            /* Margen automático izquierda y derecha para centrar */
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border-radius: 10px;
+            background-color: rgba(255, 185, 185,0.9);
+            border: 1px solid #ff3939;
+        }
+
+        form label {
+            font-weight:450;
+            padding: 3x;
+        }
+        div#errorMessage{
+            width: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Editar Producto</h2>
+        <form action="/Tienda/editar" method="post" th:object="${product}">
+            <input type="hidden" name="id" th:value="${currentProduct.id}" />
+
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" class="form-control-sm"
+                th:value="${currentProduct.nombre}"><br>
+            <label for="precio">Precio:</label><br>
+            <input type="number" id="precio" name="precio" class="form-control-sm"
+                th:value="${currentProduct.precio}"><br>
+            <label for="talla">Talla:</label><br>
+            <select id="talla" name="talla" class="form-control-sm">
+                <option disabled>Camisas Vestidos Medias</option>
+                <option value="XS" th:selected="${currentProduct.talla == 'XS'}">XS</option>
+                <option value="S" th:selected="${currentProduct.talla == 'S'}">S</option>
+                <option value="M" th:selected="${currentProduct.talla == 'M'}">M</option>
+                <option value="L" th:selected="${currentProduct.talla == 'L'}">L</option>
+                <option value="XL" th:selected="${currentProduct.talla == 'XL'}">XL</option>
+                <option disabled>Pantalon Zapatos</option>
+                <option th:each="i : ${#numbers.sequence(28, 43)}" th:value="${i}" th:text="${i}" th:selected="${currentProduct.talla == i}"></option>
+            </select><br>
+            <label for="marca">Marca:</label><br>
+            <select id="marca" name="marca" class="form-control-sm">
+                <option value="Momus" th:selected="${currentProduct.marca== 'Momus'}">Momus</option>
+                <option value="Versage" th:selected="${currentProduct.marca== 'Versage'}">Versage</option>
+                <option value="Zaful" th:selected="${currentProduct.marca== 'Zaful'}">Zaful</option>
+            </select>
+            <br>
+            <label for="stock">Stock:</label><br>
+            <input type="number" id="stock" name="stock" class="form-control-sm" th:value="${currentProduct.stock}"><br>
+            <label for="descuento">Descuento (%):</label><br>
+            <input type="number" id="descuento" name="descuento" class="form-control-sm"
+                th:value="${currentProduct.descuento}"><br>
+            <label for="urlImagen">URL de la Imagen:</label><br>
+            <input type="text" id="urlImagen" name="Urlimage" class="form-control-sm"
+                th:value="${currentProduct.urlimage}"><br><br>
+
+            <input type="submit" value="Editar Producto" class="btn btn-primary" onclick="return validarFormulario()">
+            <input type="button" value="Cancelar" onclick="window.location.href='/Tienda/Administracion'"
+                class="btn btn-danger">
+        </form><br><br>
+        <div id="errorMessage" class="alert alert-danger" style="visibility:hidden;"></div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById("nombre").value;
+            var precio = document.getElementById("precio").value;
+            var talla = document.getElementById("talla").value;
+            var marca = document.getElementById("marca").value;
+            var stock = document.getElementById("stock").value;
+            var descuento = document.getElementById("descuento").value;
+            var URL = document.getElementById("urlImagen").value;
+            // Verificacion de los campos
+
+            if (nombre === "" || precio === "" || talla === "" || marca === "" || stock === "" || descuento === "" || URL === "") {
+                document.getElementById("errorMessage").innerHTML = "Todos los campos deben estar rellenados";
+                document.getElementById("errorMessage").style.visibility = "visible"
+                document.getElementById("errorMessage").style.display = "block";
+
+                return false; // Evitar que se envíe el formulario
+            } else {
+                return true; // Permitir enviar el formulario si todos los campos están completos
+            }
+        }
+    </script>
+</body>
+
+</html>

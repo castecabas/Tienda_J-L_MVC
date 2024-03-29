@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang='es' xmlns:th='http://www.thymeleaf.org'>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagina Principal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+    nav {
+      background-color: pink;
+    }
+
+    ul.nav {
+      align-items: center;
+      
+    }
+
+    ul.nav li {
+      margin: 5px;
+    }
+
+    #Tabla_usuario {
+      text-align: center;
+    }
+
+    #Tabla_usuario td {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+
+    .custom-size {
+      font-size: 17px;
+    }
+    
+    #Tabla_Productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      margin: 10px;
+      width: 300px;
+    }
+
+    #img_product {
+      width: auto;
+      height: auto;
+      max-width: 300px;
+      max-height: 310px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul class="nav">
+      <li class="nav-item">
+        <img srcset="https://cdn.icon-icons.com/icons2/370/PNG/512/Home3_37171.png" width="50px" height="50px">
+      </li>
+      <li>
+        <table id="Tabla_usuario" >
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Rol</th>
+              <th> Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td th:text="${cliente.Nombre}"></td>
+              <td th:text="${cliente.Correo}"></td>
+              <td th:text="${cliente.Rol}"></td>
+              <td th:text="${cliente.Conectado}"></td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li th:if="${cliente.Rol == 'Admin'}">
+        <a class="btn btn-outline-danger" href="/Tienda/Empleados">Empleados</a>
+      </li>
+      <li th:if="${cliente.Rol == 'Admin' or cliente.Rol == 'Empleado'}">
+        <a class="btn btn-outline-danger" href="/Tienda/Administracion">Administrar</a>
+      </li>
+      <li>
+        <a class="btn btn-outline-danger" href="/Tienda/Perfil">Perfil</a>
+      </li>
+      <li>
+        <a class="btn btn-outline-danger" href="/Tienda/Logout">Cerrar Sesion</a>
+      </li>
+    </ul>
+  </nav>
+  <br>
+  <div id="Buscador" class="text-center">
+    <form id="Busqueda">
+      <input type="text" id="Busqueda_text" placeholder="🔎 Buscar un Producto" class="form-control-sm custom-size">
+      <button type="submit" class="btn btn-danger">Buscar</button>
+    </form>
+  </div>
+
+  <div id="Tabla_Productos">
+    <div th:if="${product.isEmpty()}">
+      No hay productos en la lista
+    </div>
+    <div th:each="product : ${product}" class="card">
+      <img id="img_product" th:src="${product.urlimage}" class="card-img-top" alt="Imagen del producto">
+      <div class="card-body">
+        <h5 class="card-title" th:text="${product.Nombre}"></h5>
+        <p class="card-text">
+          Precio: <span th:text="${product.Precio}"></span><br>
+          Talla: <span th:text="${product.Talla}"></span><br>
+          Marca: <span th:text="${product.Marca}"></span><br>
+          Stock: <span th:text="${product.Stock}"></span><br>
+          Descuento (%): <span th:text="${product.Descuento}"></span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('Busqueda').addEventListener('submit', function (event) {
+      event.preventDefault(); // Evita el envío del formulario
+
+      var searchText = document.getElementById('Busqueda_text').value.toLowerCase(); // Obtiene el texto de búsqueda en minúsculas
+
+      var cards = document.querySelectorAll('#Tabla_Productos .card');
+
+      cards.forEach(function (card) {
+        var productName = card.querySelector('.card-title').textContent.toLowerCase(); // Obtiene el nombre del producto en minúsculas
+        if (productName.includes(searchText)) {
+          card.style.display = ''; // Muestra la tarjeta si el nombre del producto contiene el texto de búsqueda
+        } else {
+          card.style.display = 'none'; // Oculta la tarjeta si el nombre del producto no contiene el texto de búsqueda
+        }
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

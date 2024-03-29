@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/05.jpg');
+            background-size: cover;
+        }
+        
+        .container {
+            width: 300px; 
+            height: 430px;
+            border: 1px solid #ccc; 
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: rgba(240, 240, 240,0.9);
+
+        }
+
+        label{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+            display: block; 
+        }
+        #logo{
+            width: 100px;
+            height: 100px;
+            border-radius: 40%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container" >
+        <img id="logo" srcset="https://media.discordapp.net/attachments/500048888313675787/1219886884919185490/DALLE_2024-03-20_00.54.44.png?ex=660cef31&is=65fa7a31&hm=c848ed6a657348c2c133e8f7cda607a729759184ea5c5b3c71fe60ea2dce1605&=&format=webp&quality=lossless&width=676&height=676">
+        <br><br>
+        <form action="/Tienda/Logear" method="get" th:object="${client}">
+            <input type="text" id="correo" name="correo" placeholder="✉ Correo" class="form-control"><br>
+            <input type="password" id="contrasena" name="contrasena" placeholder="🔑 Contraseña" class="form-control"><br>
+            <label>No tienes Cuenta?</label><a href="/Tienda/registrar">Registrarse</a><br><br>
+            <input type="submit" class="btn btn-outline-primary" value="Ingresar">
+            
+        </form>
+    </div>
+   
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</html>
