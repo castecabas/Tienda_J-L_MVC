@@ -42,7 +42,7 @@
 <body>
     <div class="container">
         <h2>Editar Perfil</h2>
-        <form action="/Tienda/Empleado/editar" method="post" th:object="${client}">
+        <form action="/Tienda/Perfil/editar" method="post" th:object="${client}">
             <input type="hidden" name="id" th:value="${current_User.id}" />
             
             <label for="nombre">Nombre:</label><br>
