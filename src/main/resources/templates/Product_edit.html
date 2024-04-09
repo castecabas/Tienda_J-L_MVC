@@ -6,44 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <style>
-        body,
-        html {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-image: url('https://wallpapers.com/images/featured/red-mountain-hl3tltk7i8c7swqg.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        div.container {
-            text-align: center;
-            height: 550px;
-            width: 330px;
-            margin: 0 auto;
-            /* Margen automático izquierda y derecha para centrar */
-            padding-top: 30px;
-            padding-bottom: 30px;
-            padding-left: 50px;
-            padding-right: 50px;
-            border-radius: 10px;
-            background-color: rgba(255, 185, 185,0.9);
-            border: 1px solid #ff3939;
-        }
-
-        form label {
-            font-weight:450;
-            padding: 3x;
-        }
-        div#errorMessage{
-            width: 200px;
-        }
-    </style>
-
+        <link rel="stylesheet" th:href="@{/Product_edit.css}" />
 </head>
 
 <body>
@@ -61,18 +24,29 @@
                 th:value="${currentProduct.precio}"><br>
             <label for="talla">Talla:</label><br>
             <select id="talla" name="talla" class="form-control-sm">
-                <option disabled>Camisas Vestidos Medias</option>
+                <option value="Unico" th:selected="${currentProduct.talla == 'Unico'}">Unico</option>
+                <option disabled>-Tallas-</option>
                 <option value="XS" th:selected="${currentProduct.talla == 'XS'}">XS</option>
                 <option value="S" th:selected="${currentProduct.talla == 'S'}">S</option>
                 <option value="M" th:selected="${currentProduct.talla == 'M'}">M</option>
                 <option value="L" th:selected="${currentProduct.talla == 'L'}">L</option>
                 <option value="XL" th:selected="${currentProduct.talla == 'XL'}">XL</option>
-                <option disabled>Pantalon Zapatos</option>
+                <option disabled>-Tallas Numeradas-</option>
                 <option th:each="i : ${#numbers.sequence(28, 43)}" th:value="${i}" th:text="${i}" th:selected="${currentProduct.talla == i}"></option>
             </select><br>
             <label for="marca">Marca:</label><br>
             <select id="marca" name="marca" class="form-control-sm">
+                <option value="Adidas" th:selected="${currentProduct.marca== 'Adidas'}">Adidas</option>
+                <option value="Burberry" th:selected="${currentProduct.marca== 'Burberry'}">Burberry</option>
+                <option value="Dior" th:selected="${currentProduct.marca== 'Dior'}">Dior</option>
+                <option value="Gucci" th:selected="${currentProduct.marca== 'Gucci'}">Gucci</option>
+                <option value="H&M" th:selected="${currentProduct.marca== 'H&M'}">H&M</option>
+                <option value="Levi´s" th:selected="${currentProduct.marca== 'Levi´s'}">Levi´s</option>
                 <option value="Momus" th:selected="${currentProduct.marca== 'Momus'}">Momus</option>
+                <option value="New Era" th:selected="${currentProduct.marca== 'New Era'}">New Era</option>
+                <option value="Nike" th:selected="${currentProduct.marca== 'Nike'}">Nike</option>
+                <option value="Prada" th:selected="${currentProduct.marca== 'Prada'}">Prada</option>
+                <option value="Rolex" th:selected="${currentProduct.marca== 'Rolex'}">Rolex</option>
                 <option value="Versage" th:selected="${currentProduct.marca== 'Versage'}">Versage</option>
                 <option value="Zaful" th:selected="${currentProduct.marca== 'Zaful'}">Zaful</option>
             </select>

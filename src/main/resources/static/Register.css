@@ -1,0 +1,29 @@
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://www.bhmpics.com/downloads/blue-minimalist-Wallpapers/6.wp8063327.jpg');
+    background-size: cover;
+    /* Para que la imagen de fondo cubra todo el área */
+    background-repeat: no-repeat;
+    /* Para evitar repeticion*/
+}
+
+.container {
+    width: 300px;
+    height: 480px;
+    border: 1px solid #6883fd;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(194, 226, 255, 0.2);
+}
+
+label {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}

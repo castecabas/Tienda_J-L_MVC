@@ -1,0 +1,54 @@
+body,
+html {
+    width: 100%;
+}
+
+nav ul {
+    align-items: center;
+    background-color: rgb(203, 253, 253);
+    margin: 1px;
+    width: auto;
+    height: 70px;
+}
+
+nav li {
+    margin-left: 15px;
+}
+
+ lord-icon{
+    height: 40px;
+    width: 40px;
+}
+
+#Tabla_Productos {
+    width: auto;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 1s ease;
+    opacity: 1;
+}
+
+.table-striped {
+    margin-bottom: 3%;
+    margin-top: 3%;
+    border: 2px solid rgb(196, 196, 196);
+}
+
+.table-striped th {
+    border: 1px solid rgb(149, 147, 255);
+    color: rgb(0, 15, 224);
+}
+
+#Tabla_Ventas {
+    width: auto;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 1s ease;
+    opacity: 1;
+}

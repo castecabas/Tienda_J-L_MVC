@@ -14,7 +14,7 @@
 	<name>Tienda_ropa_J-L</name>
 	<description>Este proyecto abarcara un sistema de ropa mediante arquitectura MVC</description>
 	<properties>
-		<java.version>22</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

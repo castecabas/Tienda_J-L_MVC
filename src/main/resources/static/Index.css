@@ -1,0 +1,87 @@
+html{
+    min-width: 720px;
+}
+
+nav {
+    background-color: rgb(255, 208, 216);
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-item:last-child {
+    text-align: right;
+  }
+
+lord-icon{
+    height: 55px;
+    width: 45px;
+}
+
+ul.nav {
+    align-items: center;
+}
+
+ul.nav li {
+    margin: 5px;
+}
+
+#img_logo{
+    max-width: 70px;
+    aspect-ratio: 1/1;
+    
+}
+
+div#carrusel_IMG div img {
+    height: 700px;
+    align-self: center;
+    object-fit: fill;
+}
+
+.custom-search {
+    width: 400px;
+    height: 45px;
+}
+
+#Tabla_Productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    margin: 10px;
+    width: 300px;
+}
+
+#img_product {
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 350px;
+    aspect-ratio: 9/16;
+}
+
+.foot {
+    height: 170px;
+    justify-content: center;
+}
+
+.foot li{
+    padding: 10px;
+    border-right:  5px solid rgb(255, 121, 121);
+    border-radius: 5px;
+}
+
+.foot li:last-child {
+    border-right: none;
+  }

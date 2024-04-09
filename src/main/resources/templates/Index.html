@@ -7,104 +7,81 @@
   <title>Pagina Principal</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-  <style>
-    nav {
-      background-color: pink;
-    }
-
-    ul.nav {
-      align-items: center;
-      
-    }
-
-    ul.nav li {
-      margin: 5px;
-    }
-
-    #Tabla_usuario {
-      text-align: center;
-    }
-
-    #Tabla_usuario td {
-      padding-right: 5px;
-      padding-left: 5px;
-    }
-
-    .custom-size {
-      font-size: 17px;
-    }
-    
-    #Tabla_Productos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .card {
-      margin: 10px;
-      width: 300px;
-    }
-
-    #img_product {
-      width: auto;
-      height: auto;
-      max-width: 300px;
-      max-height: 310px;
-    }
-  </style>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <link rel="stylesheet" th:href="@{/Index.css}" />
 </head>
+
 
 <body>
   <nav>
     <ul class="nav">
-      <li class="nav-item">
-        <img srcset="https://cdn.icon-icons.com/icons2/370/PNG/512/Home3_37171.png" width="50px" height="50px">
-      </li>
-      <li>
-        <table id="Tabla_usuario" >
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Correo</th>
-              <th>Rol</th>
-              <th> Estado</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td th:text="${cliente.Nombre}"></td>
-              <td th:text="${cliente.Correo}"></td>
-              <td th:text="${cliente.Rol}"></td>
-              <td th:text="${cliente.Conectado}"></td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
+
       <li th:if="${cliente.Rol == 'Admin'}">
-        <a class="btn btn-outline-danger" href="/Tienda/Empleados">Empleados</a>
+        <a href="/Tienda/Empleados">
+          <lord-icon src="https://cdn.lordicon.com/spukaklw.json" trigger="hover" colors="primary:#911710">
+          </lord-icon>
+        </a>
       </li>
       <li th:if="${cliente.Rol == 'Admin' or cliente.Rol == 'Empleado'}">
-        <a class="btn btn-outline-danger" href="/Tienda/Administracion">Administrar</a>
+        <a href="/Tienda/Administracion">
+          <lord-icon src="https://cdn.lordicon.com/ifsxxxte.json" trigger="hover" colors="primary:#911710">
+          </lord-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <img id="img_logo"
+          srcset="https://media.discordapp.net/attachments/500048888313675787/1226762939688816652/output-onlinepngtools.png?ex=6625f304&is=66137e04&hm=1cb5f6ba50f2f8e231d823741849217a4a6df3f11bb61fba832008fe581c7c5d&=&format=webp&quality=lossless&width=676&height=676">
+      </li>
+
+      <li>
+        <a href="/Tienda/Perfil">
+          <lord-icon src="https://cdn.lordicon.com/hrjifpbq.json" trigger="hover" colors="primary:#911710">
+          </lord-icon>
+        </a>
       </li>
       <li>
-        <a class="btn btn-outline-danger" href="/Tienda/Perfil">Perfil</a>
-      </li>
-      <li>
-        <a class="btn btn-outline-danger" href="/Tienda/Logout">Cerrar Sesion</a>
+        <a href="/Tienda/Logout">
+          <lord-icon src="https://cdn.lordicon.com/whtfgdfm.json" trigger="hover" colors="primary:#911710">
+          </lord-icon>
+        </a>
       </li>
     </ul>
   </nav>
+
+  <div id="carrusel_IMG" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://busynessprofile.com/wp-content/uploads/2021/05/F-10-Womens-Clothing-Stores.jpg"
+          class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.vmcdn.ca/f/files/via/images/business/nettlestale_306wcordova-34.jpg"
+          class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="https://assets-mr-mag-com.s3.amazonaws.com/2021/08/JARA_VuoriAbbotKiney-11-1024x683.jpg"
+          class="d-block w-100">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carrusel_IMG" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carrusel_IMG" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
   <br>
   <div id="Buscador" class="text-center">
-    <form id="Busqueda">
-      <input type="text" id="Busqueda_text" placeholder="🔎 Buscar un Producto" class="form-control-sm custom-size">
+    <form id="Busqueda" class="form-inline">
+      <input type="text" id="Busqueda_text" placeholder="Buscar un Producto" class="form-control-sm custom-search">
       <button type="submit" class="btn btn-danger">Buscar</button>
     </form>
   </div>
-
+  <br>
   <div id="Tabla_Productos">
-    <div th:if="${product.isEmpty()}">
+    <div th:if="${product.isEmpty()}" class="alert alert-warning">
       No hay productos en la lista
     </div>
     <div th:each="product : ${product}" class="card">
@@ -121,6 +98,27 @@
       </div>
     </div>
   </div>
+
+  <nav>
+    <ul class="nav foot">
+      <li>
+        <h3>Sobre nosotros:</h3>
+        Somos una empresa pequeña <br>
+        que trae productos economicos y calidad
+      </li>
+      <li>
+        <h3>Contacto:</h3>
+        Nuestra dirección: Cl 18#25-33<br>
+        Teléfono: 634-1269871<br>
+        correo: TiendaJ&L@gmail.com
+      </li>
+      <li>
+        <h3>Librerias:</h3>
+        <a href="https://lordicon.com/">Icons by Lordicon.com</a><br>
+        <a href="https://getbootstrap.com">Bootstrap.com</a>
+      </li>
+    </ul>
+  </nav>
 
   <script>
     document.getElementById('Busqueda').addEventListener('submit', function (event) {

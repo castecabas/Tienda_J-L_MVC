@@ -71,7 +71,7 @@ public class RoutesController {
             model.addAttribute("cliente", cliente);
             return "Index";
         } else {
-            return "Login";
+            return "redirect:/Tienda";
         }
     }
 
@@ -79,7 +79,7 @@ public class RoutesController {
     public String CerrarSesion() {
         cliente.setConectado(false);
         R_Client.save(cliente);
-        return "Login";
+        return "redirect:/Tienda";
     }
 
     @GetMapping("/Administracion")
@@ -120,7 +120,9 @@ public class RoutesController {
     public String Empleados(Model model) {
 
         List<Client> Empleados = R_Client.findByRol("Empleado");
+        List<Client> Clientes = R_Client.findByRol("Cliente");
         model.addAttribute("Employees", Empleados);
+        model.addAttribute("Clients", Clientes);
         return "Employees";
     }
 
