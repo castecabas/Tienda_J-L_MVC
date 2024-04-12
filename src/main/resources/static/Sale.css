@@ -8,6 +8,7 @@ html {
     justify-content: center;
     background-image: url('https://static.vecteezy.com/system/resources/previews/030/698/558/large_2x/purple-minimalist-wallpaper-high-quality-4k-hdr-free-photo.jpg');
     background-size: cover;
+    font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
 
 div.container {

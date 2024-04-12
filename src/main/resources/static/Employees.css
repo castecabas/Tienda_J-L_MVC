@@ -1,30 +1,37 @@
-nav ul {
-    align-items: center;
-    background-color: rgb(203, 220, 253);
-    margin: 1px;
-    width: auto;
-    height: 70px;
-  }
-  nav li {
-    margin-left: 15px;
-  }
-
-  lord-icon{
-    height: 40px;
-    width: 40px;
+body {
+  font-family: 'Arial', 'Helvetica Neue';
 }
 
-  #Tabla_Empleados , #Tabla_Clientes{
-    width: auto;
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    border: 2px solid rgb(196, 196, 196);
-  }
+nav ul {
+  align-items: center;
+  background-color: rgb(203, 220, 253);
+  margin: 1px;
+  width: auto;
+  height: 70px;
+}
 
-  #Tabla_Empleados th, #Tabla_Clientes th{
-    border: 1px solid rgb(219, 219, 219);
-    color: rgb(0, 9, 141);
-  }
+nav li {
+  margin-left: 15px;
+}
+
+lord-icon {
+  height: 40px;
+  width: 40px;
+}
+
+#Tabla_Empleados,
+#Tabla_Clientes {
+  width: auto;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid rgb(196, 196, 196);
+}
+
+#Tabla_Empleados th,
+#Tabla_Clientes th {
+  border: 1px solid rgb(219, 219, 219);
+  color: rgb(0, 9, 141);
+}

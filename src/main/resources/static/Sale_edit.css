@@ -9,6 +9,7 @@ html {
     background-image: url('https://i.pinimg.com/originals/ec/df/7b/ecdf7b1744bb19cc42f1f8a7fc3b29e2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
 
 div.container {

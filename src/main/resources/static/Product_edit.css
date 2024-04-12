@@ -9,6 +9,7 @@ html {
     background-image: url('https://wallpapers.com/images/hd/firewatch-3840-x-2160-background-29qewl6s55nucqi0.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
 
 div.container {
@@ -29,6 +30,7 @@ div.container {
 input,
 select {
     width: 200px;
+    text-align: center;
 }
 
 form label {

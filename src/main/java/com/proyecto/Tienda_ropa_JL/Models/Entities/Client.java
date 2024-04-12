@@ -20,6 +20,6 @@ public class Client {
     private String correo;
     @Column(nullable = false)
     private String contrasena;
-    private String rol="Cliente";
-    private Boolean conectado=false;
+    private String rol = "Cliente";
+    private Boolean conectado = false;
 }

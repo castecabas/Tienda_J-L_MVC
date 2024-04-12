@@ -8,6 +8,7 @@ html {
     justify-content: center;
     background-image: url('https://i.pinimg.com/originals/fb/07/19/fb0719a22a1115674f38848dbfe05855.jpg');
     background-size: cover;
+    font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
 
 div.container {
@@ -27,6 +28,7 @@ div.container {
 input,
 select {
     width: 200px;
+    text-align: center;
 }
 
 form label {

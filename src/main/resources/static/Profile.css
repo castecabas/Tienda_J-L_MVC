@@ -9,14 +9,14 @@ html {
     background-image: url('https://i.pinimg.com/originals/0b/fa/c6/0bfac64e98a559b7e94ea67523aa513f.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
 
 div.container {
     text-align: center;
-    height: 400px;
+    height: 430px;
     width: 300px;
     margin: 0 auto;
-    /* Margen automático izquierda y derecha para centrar */
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 50px;

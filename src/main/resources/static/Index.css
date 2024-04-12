@@ -2,15 +2,14 @@ html{
     min-width: 720px;
 }
 
+body{
+    font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
+}
+
 nav {
     background-color: rgb(255, 208, 216);
     padding-left: 200px;
     padding-right: 200px;
-}
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .nav-item {
@@ -18,9 +17,6 @@ nav {
     text-align: center;
 }
 
-.nav-item:last-child {
-    text-align: right;
-  }
 
 lord-icon{
     height: 55px;
@@ -38,11 +34,11 @@ ul.nav li {
 #img_logo{
     max-width: 70px;
     aspect-ratio: 1/1;
-    
 }
 
 div#carrusel_IMG div img {
-    height: 700px;
+    max-height: 800px;
+    aspect-ratio: 16/9;
     align-self: center;
     object-fit: fill;
 }
@@ -50,6 +46,7 @@ div#carrusel_IMG div img {
 .custom-search {
     width: 400px;
     height: 45px;
+    max-width: 500px;
 }
 
 #Tabla_Productos {
@@ -71,17 +68,18 @@ div#carrusel_IMG div img {
     aspect-ratio: 9/16;
 }
 
-.foot {
+footer .foot {
+    background-color: rgb(255, 208, 216);
     height: 170px;
     justify-content: center;
 }
 
-.foot li{
+footer .foot li{
     padding: 10px;
     border-right:  5px solid rgb(255, 121, 121);
     border-radius: 5px;
 }
 
-.foot li:last-child {
+footer .foot li:last-child {
     border-right: none;
   }

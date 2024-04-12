@@ -15,7 +15,6 @@
 <body>
   <nav>
     <ul class="nav">
-
       <li th:if="${cliente.Rol == 'Admin'}">
         <a href="/Tienda/Empleados">
           <lord-icon src="https://cdn.lordicon.com/spukaklw.json" trigger="hover" colors="primary:#911710">
@@ -47,59 +46,63 @@
       </li>
     </ul>
   </nav>
-
-  <div id="carrusel_IMG" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://busynessprofile.com/wp-content/uploads/2021/05/F-10-Womens-Clothing-Stores.jpg"
-          class="d-block w-100">
-      </div>
-      <div class="carousel-item">
-        <img src="https://www.vmcdn.ca/f/files/via/images/business/nettlestale_306wcordova-34.jpg"
-          class="d-block w-100">
-      </div>
-      <div class="carousel-item">
-        <img src="https://assets-mr-mag-com.s3.amazonaws.com/2021/08/JARA_VuoriAbbotKiney-11-1024x683.jpg"
-          class="d-block w-100">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carrusel_IMG" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carrusel_IMG" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
-  </div>
-  <br>
-  <div id="Buscador" class="text-center">
-    <form id="Busqueda" class="form-inline">
-      <input type="text" id="Busqueda_text" placeholder="Buscar un Producto" class="form-control-sm custom-search">
-      <button type="submit" class="btn btn-danger">Buscar</button>
-    </form>
-  </div>
-  <br>
-  <div id="Tabla_Productos">
-    <div th:if="${product.isEmpty()}" class="alert alert-warning">
-      No hay productos en la lista
-    </div>
-    <div th:each="product : ${product}" class="card">
-      <img id="img_product" th:src="${product.urlimage}" class="card-img-top" alt="Imagen del producto">
-      <div class="card-body">
-        <h5 class="card-title" th:text="${product.Nombre}"></h5>
-        <p class="card-text">
-          Precio: <span th:text="${product.Precio}"></span><br>
-          Talla: <span th:text="${product.Talla}"></span><br>
-          Marca: <span th:text="${product.Marca}"></span><br>
-          Stock: <span th:text="${product.Stock}"></span><br>
-          Descuento (%): <span th:text="${product.Descuento}"></span>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <nav>
+  <main>
+    <section>
+      <article>
+        <div id="carrusel_IMG" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://busynessprofile.com/wp-content/uploads/2021/05/F-10-Womens-Clothing-Stores.jpg"
+                class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="https://www.vmcdn.ca/f/files/via/images/business/nettlestale_306wcordova-34.jpg"
+                class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="https://assets-mr-mag-com.s3.amazonaws.com/2021/08/JARA_VuoriAbbotKiney-11-1024x683.jpg"
+                class="d-block w-100">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carrusel_IMG" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carrusel_IMG" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </article>
+      <br>
+      <article id="Buscador" class="text-center">
+        <form id="Busqueda" class="form-inline">
+          <input type="text" id="Busqueda_text" placeholder="Buscar un Producto" class="form-control-sm custom-search">
+          <button type="submit" class="btn btn-danger">Buscar</button>
+        </form>
+      </article>
+      <br>
+      <article id="Tabla_Productos">
+        <div th:if="${product.isEmpty()}" class="alert alert-warning">
+          No hay productos en la lista
+        </div>
+        <div th:each="product : ${product}" class="card">
+          <img id="img_product" th:src="${product.urlimage}" class="card-img-top" alt="Imagen del producto">
+          <div class="card-body">
+            <h5 class="card-title" th:text="${product.Nombre}"></h5>
+            <p class="card-text">
+              Precio: <span th:text="${product.Precio}"></span><br>
+              Talla: <span th:text="${product.Talla}"></span><br>
+              Marca: <span th:text="${product.Marca}"></span><br>
+              Stock: <span th:text="${product.Stock}"></span><br>
+              Descuento (%): <span th:text="${product.Descuento}"></span>
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>
     <ul class="nav foot">
       <li>
         <h3>Sobre nosotros:</h3>
@@ -118,7 +121,7 @@
         <a href="https://getbootstrap.com">Bootstrap.com</a>
       </li>
     </ul>
-  </nav>
+  </footer>
 
   <script>
     document.getElementById('Busqueda').addEventListener('submit', function (event) {
@@ -139,6 +142,7 @@
     });
   </script>
 
+  <script src="https://kit.fontawesome.com/f79189eca3.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>

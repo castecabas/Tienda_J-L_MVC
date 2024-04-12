@@ -169,6 +169,7 @@ public class RoutesController {
         }
 
     }
+
     // --- pagina crear venta
     @GetMapping("/Venta")
     public String registrarVenta(Model model) {
@@ -177,16 +178,14 @@ public class RoutesController {
 
     // --- pagina editar venta
     @GetMapping("/editarVenta/{id}")
-    public String editarVenta(Model model, @PathVariable Long id){
+    public String editarVenta(Model model, @PathVariable Long id) {
         Optional<Sale> venta = R_Sale.findById(id);
 
-        if(venta.isPresent()){
+        if (venta.isPresent()) {
             model.addAttribute("currentSale", venta.get());
             return "Sale_edit";
-        }
-        else{
+        } else {
             return "redirect:/Tienda/Administracion";
         }
     }
 }
-

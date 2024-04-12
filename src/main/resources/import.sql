@@ -6,7 +6,6 @@ insert into Product (nombre,precio,talla,marca,stock,descuento,urlimage) values 
 INSERT INTO Product (nombre, precio, talla, marca, stock, descuento, urlimage) values ('Camiseta Blanca', '45000', 'S', 'Nike', 25, 10, 'https://monarca.com.co/wp-content/uploads/2023/10/016445DELWHITE.jpg');
 INSERT INTO Product (nombre, precio, talla, marca, stock, descuento, urlimage) values ('Pantalón Negro', '75000', 'M', 'Adidas', 30, 15, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/049db17a74454beeb735ac360103c076_9366/Pantalon_Adicolor_SST_Negro_GN8453_01_laydown.jpg');
 INSERT INTO Product (nombre, precio, talla, marca, stock, descuento, urlimage) values ('Zapatos de Cuero', '180000', 'L', 'Gucci', 10, 5, 'https://http2.mlstatic.com/D_NQ_NP_615429-MCO74647593554_022024-O.webp');
-
 INSERT INTO Product (nombre, precio, talla, marca, stock, descuento, urlimage) values ('Chaqueta de Jean', '95000', 'XL', 'Levi´s', 20, 0, 'https://http2.mlstatic.com/D_NQ_NP_703858-MCO51953511646_102022-O.webp');
 INSERT INTO Product (nombre, precio, talla, marca, stock, descuento, urlimage) values ('Gorra Roja', '35000', 'Unico', 'New Era', 40, 8, 'https://neweraco.vtexassets.com/arquivos/ids/163426/11591122_1.png?v=638121818266030000');
 INSERT INTO Product (nombre, precio, talla, marca, stock, descuento, urlimage) values ('Bufanda de Lana', '55000', 'M', 'Burberry', 15, 12, 'https://assets.burberry.com/is/image/Burberryltd/47B9244E-EB2A-4145-BCDE-C3A29A3CA0E9?$BBY_V3_SL_1$&wid=1501&hei=1500');

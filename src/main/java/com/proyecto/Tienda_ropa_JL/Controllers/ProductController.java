@@ -30,12 +30,10 @@ public class ProductController {
     }
 
     @PostMapping("/editar")
-    public String EditarProducto(@RequestParam("id") String id, @ModelAttribute Product producto)
-    {
-        Long ID= Long.parseLong(id);
-        Product old_product= R_Product.findById(ID).orElse(null);
-        if(producto!=null)
-        {
+    public String EditarProducto(@RequestParam("id") String id, @ModelAttribute Product producto) {
+        Long ID = Long.parseLong(id);
+        Product old_product = R_Product.findById(ID).orElse(null);
+        if (producto != null) {
             old_product.setNombre(producto.getNombre());
             old_product.setPrecio(producto.getPrecio());
             old_product.setTalla(producto.getTalla());

@@ -1,12 +1,11 @@
 package com.proyecto.Tienda_ropa_JL.Models.Entities;
 
-
 import java.math.BigDecimal;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name="product")
+@Table(name = "product")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data

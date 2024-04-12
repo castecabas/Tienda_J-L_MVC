@@ -9,6 +9,7 @@ html {
     background-image: url('https://static.vecteezy.com/system/resources/previews/015/617/015/non_2x/blue-shades-of-lake-and-mountains-and-landscape-nature-background-art-vector.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
 
 div.container {

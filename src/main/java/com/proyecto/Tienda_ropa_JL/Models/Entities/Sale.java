@@ -9,7 +9,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name="sale")
+@Table(name = "sale")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -29,7 +29,7 @@ public class Sale {
     private Date creacion;
 
     @PrePersist
-    public void set_creacion(){
-        this.creacion= Date.valueOf(LocalDate.now());
+    public void set_creacion() {
+        this.creacion = Date.valueOf(LocalDate.now());
     }
 }

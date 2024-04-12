@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.proyecto.Tienda_ropa_JL.Models.Entities.Sale;
 
 @Repository
-public interface SaleRepository extends JpaRepository<Sale,Long>{
-    
+public interface SaleRepository extends JpaRepository<Sale, Long> {
+
 }

@@ -2,15 +2,11 @@ body,
 html {
     height: 100%;
     width: 100%;
-    margin: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
     background-image: url('https://www.bhmpics.com/downloads/blue-minimalist-Wallpapers/6.wp8063327.jpg');
     background-size: cover;
-    /* Para que la imagen de fondo cubra todo el área */
-    background-repeat: no-repeat;
-    /* Para evitar repeticion*/
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
 }
 
 .container {
@@ -20,10 +16,5 @@ html {
     padding: 30px;
     text-align: center;
     border-radius: 10px;
-    background-color: rgba(194, 226, 255, 0.2);
-}
-
-label {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: large;
+    background-color: rgba(194, 226, 255, 0.95);
 }
