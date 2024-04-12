@@ -15,7 +15,7 @@ import com.proyecto.Tienda_ropa_JL.Models.Repositories.ProductRepository;
 import com.proyecto.Tienda_ropa_JL.Models.Repositories.SaleRepository;
 
 @Controller
-@RequestMapping("/Tienda")
+@RequestMapping({"/Tienda","/",""})
 public class RoutesController {
     /* Aqui se pondran todo las rutas entre paginas */
 
