@@ -1,8 +1,8 @@
-html{
+html {
     min-width: 720px;
 }
 
-body{
+body {
     font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
 
@@ -18,7 +18,7 @@ nav {
 }
 
 
-lord-icon{
+lord-icon {
     height: 55px;
     width: 45px;
 }
@@ -31,8 +31,8 @@ ul.nav li {
     margin: 5px;
 }
 
-#img_logo{
-    max-width: 70px;
+#img_logo {
+    max-width: 75px;
     aspect-ratio: 1/1;
 }
 
@@ -68,18 +68,22 @@ div#carrusel_IMG div img {
     aspect-ratio: 9/16;
 }
 
+h3{
+    font-weight: 700;
+}
+
 footer .foot {
     background-color: rgb(255, 208, 216);
     height: 170px;
     justify-content: center;
 }
 
-footer .foot li{
+footer .foot li {
     padding: 10px;
-    border-right:  5px solid rgb(255, 121, 121);
+    border-right: 5px solid rgb(255, 121, 121);
     border-radius: 5px;
 }
 
 footer .foot li:last-child {
     border-right: none;
-  }
+}
