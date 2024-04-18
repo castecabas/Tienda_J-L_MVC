@@ -4,7 +4,7 @@ html {
     width: 100%;
     display: flex;
     align-items: center;
-    background-image: url('https://www.bhmpics.com/downloads/blue-minimalist-Wallpapers/6.wp8063327.jpg');
+    background-image: url('https://wallpapers.com/images/hd/minimalist-black-and-white-1920-x-1200-wallpaper-gitfzv6n8nx6e6i6.jpg');
     background-size: cover;
     font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
 }
@@ -12,9 +12,13 @@ html {
 .container {
     width: 300px;
     height: 480px;
-    border: 1px solid #6883fd;
+    border: 1px solid #ccc;
     padding: 30px;
     text-align: center;
     border-radius: 10px;
-    background-color: rgba(194, 226, 255, 0.95);
+    background-color: rgba(240, 240, 240, 1);
+}
+
+h2{
+    font-weight: 700;
 }

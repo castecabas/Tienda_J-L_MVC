@@ -27,11 +27,30 @@ lord-icon {
   display: flex;
   justify-content: center;
   text-align: center;
-  border: 2px solid rgb(196, 196, 196);
+  
 }
 
 #Tabla_Empleados th,
 #Tabla_Clientes th {
-  border: 1px solid rgb(219, 219, 219);
-  color: rgb(0, 9, 141);
+  border-bottom: 1px solid rgb(153, 153, 153);
+  color: rgb(138, 138, 138);
+    background-color: aliceblue;
+  
+}
+
+#Tabla_Empleados td,
+#Tabla_Clientes td {
+
+  font-weight: 550;
+}
+
+footer {
+  background-color: rgb(203, 220, 253);
+  position: fixed;
+  min-height: 100px;
+  max-height: 200px;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 999; 
 }

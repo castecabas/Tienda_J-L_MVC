@@ -6,27 +6,34 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('https://static.vecteezy.com/system/resources/previews/015/617/015/non_2x/blue-shades-of-lake-and-mountains-and-landscape-nature-background-art-vector.jpg');
+    background-color: #3AAFa9;
+    opacity: 1;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #3AAFa9 40px), repeating-linear-gradient(#2B7A7B55, #2B7A7B);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
+
+
+
 
 div.container {
     text-align: center;
     height: 590px;
     width: 330px;
     margin: 0 auto;
-    /* Margen automático izquierda y derecha para centrar */
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 10px;
-    background-color: rgba(201, 220, 250, 1);
-    border: 1px solid #6287ff;
+    background-color: #DEF2F1;
+    border: 1px solid #FEFFFF;
 }
 
+h2{
+    font-weight: 600;
+}
 input,
 select {
     width: 180px;
@@ -34,6 +41,7 @@ select {
 
 form label {
     padding: 2px;
+    font-weight: 550;
 }
 
 div#errorMessage {

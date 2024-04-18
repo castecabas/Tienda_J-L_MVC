@@ -4,10 +4,11 @@ html {
 
 body {
     font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
+    background-color: #fff5f8;
 }
 
 nav {
-    background-color: rgb(255, 208, 216);
+    background-color: #ffd0d8;
     padding-left: 200px;
     padding-right: 200px;
 }
@@ -43,11 +44,17 @@ div#carrusel_IMG div img {
     object-fit: fill;
 }
 
+#Busqueda_text{
+    font-size: 18px;
+}
+
 .custom-search {
     width: 400px;
-    height: 45px;
+    height: 46px;
     max-width: 500px;
 }
+
+
 
 #Tabla_Productos {
     display: flex;
@@ -58,6 +65,8 @@ div#carrusel_IMG div img {
 .card {
     margin: 10px;
     width: 300px;
+    border: 0;
+    background-color: transparent;
 }
 
 #img_product {
@@ -66,11 +75,37 @@ div#carrusel_IMG div img {
     max-width: 300px;
     max-height: 350px;
     aspect-ratio: 9/16;
+
+
+}
+
+.card-body{
+    background-color: #fae6ea;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+p.card-text{
+    font-weight: 550;
+}
+
+.card-text span{
+    font-size: 15px;
+    font-weight: 350;
 }
 
 h3{
     font-weight: 700;
 }
+
+.custom-Add{
+    width: 50px;
+    max-width: 50px;
+    text-align: center;
+}
+
+
+
 
 footer .foot {
     background-color: rgb(255, 208, 216);
@@ -87,3 +122,5 @@ footer .foot li {
 footer .foot li:last-child {
     border-right: none;
 }
+
+

@@ -28,8 +28,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <img id="img_logo"
-          srcset="https://i.postimg.cc/0Q5Q68Vj/Logo.webp">
+        <img id="img_logo" srcset="https://i.postimg.cc/0Q5Q68Vj/Logo.webp">
       </li>
 
       <li>
@@ -47,21 +46,19 @@
     </ul>
   </nav>
   <main>
+
     <section>
       <article>
         <div id="carrusel_IMG" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="https://i.postimg.cc/0NbDz0jh/Carrusel-A.jpg"
-                class="d-block w-100">
+              <img src="https://i.postimg.cc/0NbDz0jh/Carrusel-A.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-              <img src="https://i.postimg.cc/mgFThcR8/Carrusel-B.jpg"
-                class="d-block w-100">
+              <img src="https://i.postimg.cc/mgFThcR8/Carrusel-B.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-              <img src="https://i.postimg.cc/Y0VJw34k/Carrusel-C.jpg"
-                class="d-block w-100">
+              <img src="https://i.postimg.cc/Y0VJw34k/Carrusel-C.jpg" class="d-block w-100">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carrusel_IMG" data-bs-slide="prev">
@@ -78,7 +75,11 @@
       <article id="Buscador" class="text-center">
         <form id="Busqueda" class="form-inline">
           <input type="text" id="Busqueda_text" placeholder="Buscar un Producto" class="form-control-sm custom-search">
-          <button type="submit" class="btn btn-danger">Buscar</button>
+          <button type="submit" class="btn btn-none">
+            <lord-icon src="https://cdn.lordicon.com/fkdzyfle.json" trigger="hover" colors="primary:#e8308c"
+              style="width:50px;height:50px; border: solid 2px #e8308c;border-radius: 25%;">
+            </lord-icon>
+          </button>
         </form>
       </article>
       <br>
@@ -89,9 +90,9 @@
         <div th:each="product : ${product}" class="card">
           <img id="img_product" th:src="${product.urlimage}" class="card-img-top" alt="Imagen del producto">
           <div class="card-body">
-            <h5 class="card-title" th:text="${product.Nombre}"></h5>
+            <h5 class="card-title" th:text="${product.Nombre}" style="font-weight: 700;"></h5>
             <p class="card-text">
-              Precio: <span th:text="${product.Precio}"></span><br>
+              Precio: $<span th:text="${product.Precio}"></span><br>
               Talla: <span th:text="${product.Talla}"></span><br>
               Marca: <span th:text="${product.Marca}"></span><br>
               Stock: <span th:text="${product.Stock}"></span><br>
@@ -101,6 +102,7 @@
         </div>
       </article>
     </section>
+
   </main>
   <footer>
     <ul class="nav foot">
@@ -119,7 +121,7 @@
         <h3>Librerias</h3>
         <a href="https://lordicon.com/">Icons by Lordicon.com</a><br>
         <a href="https://getbootstrap.com">Bootstrap.com</a><br>
-        <a href="https://postimages.org/es/">Bostimg.com - Save your images</a>
+        <a href="https://postimages.org/es/">Postimg.com - Save your images</a>
       </li>
     </ul>
   </footer>
@@ -141,7 +143,10 @@
         }
       });
     });
+
   </script>
+
+
 
   <script src="https://kit.fontawesome.com/f79189eca3.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

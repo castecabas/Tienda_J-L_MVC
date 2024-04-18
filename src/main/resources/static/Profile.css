@@ -28,6 +28,11 @@ div.container {
 
 form label {
     padding: 3x;
+    font-weight: 550;
+}
+
+h2{
+    font-weight: 600;
 }
 
 div#errorMessage {

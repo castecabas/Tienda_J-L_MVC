@@ -6,7 +6,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('https://i.pinimg.com/originals/fb/07/19/fb0719a22a1115674f38848dbfe05855.jpg');
+    background-image: url('https://static.vecteezy.com/system/resources/previews/024/812/547/original/landscape-minimalist-modern-simple-aesthetic-natural-feel-vector.jpg');
     background-size: cover;
     font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
@@ -22,7 +22,7 @@ div.container {
     padding-right: 50px;
     border-radius: 10px;
     background-color: rgba(233, 194, 255, 1);
-    border: 1px solid #d139ff;
+    border: 1px solid #c379da;
 }
 
 input,
@@ -33,6 +33,7 @@ select {
 
 form label {
     padding: 3x;
+    font-weight: 550;
 }
 
 div#errorMessage {
@@ -42,7 +43,7 @@ div#errorMessage {
 img#imagenProducto {
     height: 88px;
     aspect-ratio: 1/1;
-    border: 1px solid rgb(86, 118, 177);
+    border: 1px solid rgb(161, 161, 161);
     border-radius: 5px;
     max-height: 88px;
 }

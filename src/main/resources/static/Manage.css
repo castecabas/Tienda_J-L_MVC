@@ -6,7 +6,7 @@ html {
 
 nav ul {
     align-items: center;
-    background-color: rgb(203, 253, 253);
+    background-color: rgb(174, 243, 243);
     margin: 1px;
     width: auto;
     height: 70px;
@@ -21,6 +21,15 @@ nav li {
     width: 40px;
 }
 
+.table th{
+    color: rgb(138, 138, 138);
+    background-color: aliceblue;
+}
+
+.table td{
+    font-weight: 550;
+}
+
 #Tabla_Productos {
     width: auto;
     max-width: 90%;
@@ -32,16 +41,6 @@ nav li {
     opacity: 1;
 }
 
-.table-striped {
-    margin-bottom: 3%;
-    margin-top: 3%;
-    border: 2px solid rgb(196, 196, 196);
-}
-
-.table-striped th {
-    border: 1px solid rgb(149, 147, 255);
-    color: rgb(0, 15, 224);
-}
 
 #Tabla_Ventas {
     width: auto;
@@ -52,4 +51,20 @@ nav li {
     text-align: center;
     transition: opacity 1s ease;
     opacity: 1;
+    border: 0
 }
+
+#Tabla_Ventas h5{
+    font-weight: 600;
+}
+
+footer {
+    background-color: rgb(174, 243, 243);
+    position:static;
+    min-height: 100px;
+    max-height: 200px;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 999; 
+  }

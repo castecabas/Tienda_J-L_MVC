@@ -6,7 +6,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('https://static.vecteezy.com/system/resources/previews/030/698/558/large_2x/purple-minimalist-wallpaper-high-quality-4k-hdr-free-photo.jpg');
+    background-image: url('https://wallpapercave.com/wp/wp7159906.jpg');
     background-size: cover;
     font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
@@ -16,14 +16,17 @@ div.container {
     height: 550px;
     width: 300px;
     margin: 0 auto;
-    /* Margen automático izquierda y derecha para centrar */
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 10px;
-    background-color: rgba(233, 194, 255, 1);
-    border: 1px solid #d139ff;
+    background-color: rgb(241, 216, 255);
+    border: 1px solid #e89bff;
+}
+
+h4{
+    font-weight: 600;
 }
 
 label {
