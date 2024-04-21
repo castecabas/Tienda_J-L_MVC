@@ -47,6 +47,14 @@
         <table class="table " id="productTable">
           <thead>
             <tr>
+              <td>
+                <button type="button" class="btn btn-info" onclick="exportToExcel('productTable')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                  </svg> Excel
+                </button>
+              </td>
               <td colspan="8" style="text-align: right;">
                 <a class="btn btn-success" href="/Tienda/formularioProducto">Nuevo Producto</a>
               </td>
@@ -64,7 +72,7 @@
           </thead>
           <tbody>
             <tr th:each="product : ${product}">
-              <td><img th:src="${product.urlimage}" alt="Imagen del producto" width="100px" height="100px"
+              <td><img th:src="${product.urlimage}" alt="Imagen del producto" width="80px" height="80px"
                   style="border-radius: 25%;"></td>
               <td th:text="${product.Nombre}"></td>
               <td th:text="${product.Precio}"></td>
@@ -100,6 +108,14 @@
         <table class="table table-striped" id="saleTable">
           <thead>
             <tr>
+              <td>
+                <button type="button" class="btn btn-info" onclick="exportToExcel('saleTable')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                  </svg>Excel
+                  </button>
+              </td>
               <td colspan="8" style="text-align: right;">
                 <a class="btn btn-success" href="/Tienda/Venta">Nueva Venta</a>
               </td>
@@ -171,7 +187,7 @@
       </article>
     </section>
   </main>
-
+  <br>
   <footer>
 
   </footer>
@@ -200,6 +216,60 @@
       TablaP.style.display = "none";
       TablaV.style.display = "block";
     }
+
+    function exportToExcel(tableId) {
+      const table = document.getElementById(tableId);
+      const cloneTable = table.cloneNode(true);
+
+      // Eliminar primera fila
+      const firstRow = cloneTable.querySelector('tr');
+      const allCells = firstRow.querySelectorAll('td, th');
+      allCells.forEach(cell => {
+        if (cell.tagName.toLowerCase() === 'th') {
+          cell.removeAttribute('colspan');
+          cell.removeAttribute('rowspan');
+          cell.removeAttribute('style');
+        } else {
+          firstRow.removeChild(cell);
+        }
+      });
+
+      // Agregar borde
+      const allRows = cloneTable.querySelectorAll('tr');
+      allRows.forEach(row => {
+        const cells = row.querySelectorAll('td, th');
+        cells.forEach(cell => {
+          cell.style.border = '1px solid #000';
+        });
+      });
+
+      // Ajustar Imagen
+      const images = cloneTable.querySelectorAll('img');
+      images.forEach(img => {
+        const cell = img.closest('td, th');
+        if (cell) {
+          cell.innerHTML = ''; // Limpiar contenido de la celda
+          cell.appendChild(img); // Colocar la imagen en la celda
+          img.width = '50';
+          img.height = '50';
+          cell.style.width = img.width + 'px'; 
+          cell.style.height = img.height + 'px'; 
+          cell.style.textAlign = 'center'; 
+          cell.style.verticalAlign = 'middle';
+        }
+      });
+
+      // Crear el archivo Excel
+      const html = cloneTable.outerHTML;
+      const url = 'data:application/vnd.ms-excel,' + encodeURIComponent(html);
+      const link = document.createElement('a');
+      link.download = tableId + '.xls';
+      link.href = url;
+      link.click();
+    }
+
+
+
   </script>
 </body>
 

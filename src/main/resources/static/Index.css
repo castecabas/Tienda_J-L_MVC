@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
-    background-color: #fff5f8;
+    background-color: #ffffff;
 }
 
 nav {
@@ -80,7 +80,7 @@ div#carrusel_IMG div img {
 }
 
 .card-body{
-    background-color: #fae6ea;
+    background-color: #ffe9ee;
     border-radius: 10px;
     text-align: center;
     

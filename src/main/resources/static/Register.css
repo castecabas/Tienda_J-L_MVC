@@ -4,8 +4,11 @@ html {
     width: 100%;
     display: flex;
     align-items: center;
-    background-image: url('https://wallpapers.com/images/hd/minimalist-black-and-white-1920-x-1200-wallpaper-gitfzv6n8nx6e6i6.jpg');
-    background-size: cover;
+    background-color: #f9f9f9;
+    opacity: 1;
+    background-image: radial-gradient(#000000 1.6500000000000001px, transparent 1.6500000000000001px), radial-gradient(#000000 1.6500000000000001px, #f9f9f9 1.6500000000000001px);
+    background-size: 66px 66px;
+    background-position: 0 0, 33px 33px;
     font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -19,6 +22,6 @@ html {
     background-color: rgba(240, 240, 240, 1);
 }
 
-h2{
+h2 {
     font-weight: 700;
 }

@@ -4,7 +4,7 @@ body {
 
 nav ul {
   align-items: center;
-  background-color: rgb(203, 220, 253);
+  background-color: #cbdcfd;
   margin: 1px;
   width: auto;
   height: 70px;
@@ -32,7 +32,7 @@ lord-icon {
 
 #Tabla_Empleados th,
 #Tabla_Clientes th {
-  border-bottom: 1px solid rgb(153, 153, 153);
+  border-bottom: 1px solid rgb(199, 199, 199);
   color: rgb(138, 138, 138);
     background-color: aliceblue;
   

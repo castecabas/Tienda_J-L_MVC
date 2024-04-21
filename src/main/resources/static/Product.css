@@ -13,7 +13,7 @@ html {
 
 div.container {
     text-align: center;
-    height: 700px;
+    height: 750px;
     width: 330px;
     margin: 0 auto;
     padding-top: 30px;
@@ -21,8 +21,12 @@ div.container {
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 10px;
-    background-color: rgba(233, 194, 255, 1);
+    background-color: rgba(233, 194, 255, 0.85);
     border: 1px solid #c379da;
+}
+
+h2{
+    font-weight: 600;
 }
 
 input,
