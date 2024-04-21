@@ -6,10 +6,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle, #3AAFa9 10%, transparent 11%);
-        background-size: 3em 3em;
-        background-color: #DEF2F1;
-        opacity: 1;
+    background: rgb(96, 150, 180);
+    background: linear-gradient(90deg, rgba(96, 150, 180, 1) 0%, rgba(126, 174, 196, 1) 58%, rgba(184, 235, 254, 1) 100%);
     font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
 
@@ -18,7 +16,7 @@ html {
 
 div.container {
     text-align: center;
-    height: 590px;
+    height: 600px;
     width: 330px;
     margin: 0 auto;
     padding-top: 30px;
@@ -26,13 +24,15 @@ div.container {
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 10px;
-    background-color: rgba(229, 255, 254,0.85);
-    border: 1px solid #90fff6;
+    background-color: rgba(243, 243, 243, 0.9);
+    border: 5px solid #BDCDD6;
 }
 
-h2{
+h2 {
     font-weight: 600;
+    color: #7795a7;
 }
+
 input,
 select {
     width: 180px;

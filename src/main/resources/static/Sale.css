@@ -6,8 +6,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('https://wallpapercave.com/wp/wp7159906.jpg');
-    background-size: cover;
+    background: rgb(76, 63, 145);
+    background: linear-gradient(90deg, rgba(76, 63, 145, 1) 0%, rgba(113, 66, 165, 1) 53%, rgba(164, 79, 205, 1) 100%);
     font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
 
@@ -21,12 +21,13 @@ div.container {
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 10px;
-    background-color: #f1d8ff;
-    border: 1px solid #e89bff;
+    background-color: #ffeff2;
+    border: 5px solid #B958A5;
 }
 
-h4{
+h4 {
     font-weight: 600;
+    color: #661a58;
 }
 
 label {
@@ -37,8 +38,11 @@ label {
 }
 
 
-form label{
-    background-color: #e6bbff;
+form label {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #AD88C6;
+    color: white;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -54,5 +58,5 @@ form label{
 textarea#descripcion_imp {
     width: 200px;
     height: auto;
-    form-sizing:content;
+    form-sizing: content;
 }

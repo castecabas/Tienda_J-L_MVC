@@ -4,7 +4,7 @@ insert into Product (nombre,precio,talla,marca,stock,descuento,urlimage) values 
 insert into Product (nombre,precio,talla,marca,stock,descuento,urlimage) values ('Medias negras','12000','36','Momus', 4, 5,'https://i.postimg.cc/26LtLSPz/C.png');
 insert into Product (nombre,precio,talla,marca,stock,descuento,urlimage) values ('Vestido Azul','120000','M','Zaful', 16, 20,'https://i.postimg.cc/Qx3zVsS3/D.png');
 INSERT INTO Product (nombre, precio, talla, marca, stock, descuento, urlimage) values ('Camiseta Blanca', '45000', 'S', 'Nike', 25, 10, 'https://i.postimg.cc/T184VX6n/E.png');
-INSERT INTO Product (nombre, precio, talla, marca, stock, descuento, urlimage) values ('Pantalón Negro', '75000', 'M', 'Adidas', 30, 15, 'https://i.postimg.cc/mrWnbkmx/F.avif');
+INSERT INTO Product (nombre, precio, talla, marca, stock, descuento, urlimage) values ('Pantalón Negro', '75000', 'M', 'Adidas', 30, 15, 'https://i.postimg.cc/mg7jPht5/F.png');
 INSERT INTO Product (nombre, precio, talla, marca, stock, descuento, urlimage) values ('Zapatos de Cuero', '180000', 'L', 'Gucci', 10, 5, 'https://i.postimg.cc/Lsb7s1QC/G.png');
 INSERT INTO Product (nombre, precio, talla, marca, stock, descuento, urlimage) values ('Chaqueta de Jean', '95000', 'XL', 'Levi´s', 20, 0, 'https://i.postimg.cc/L4f7HhtD/H.png');
 INSERT INTO Product (nombre, precio, talla, marca, stock, descuento, urlimage) values ('Gorra Roja', '35000', 'Unico', 'New Era', 40, 8, 'https://i.postimg.cc/K8mCpFgN/I.png');

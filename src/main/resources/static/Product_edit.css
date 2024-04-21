@@ -6,9 +6,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('https://wallpapers.com/images/hd/firewatch-3840-x-2160-background-29qewl6s55nucqi0.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: rgb(74, 85, 162);
+    background: linear-gradient(90deg, rgba(74, 85, 162, 1) 0%, rgba(106, 130, 191, 1) 63%, rgba(175, 203, 255, 1) 100%);
     font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
 
@@ -17,18 +16,18 @@ div.container {
     height: 650px;
     width: 330px;
     margin: 0 auto;
-    /* Margen automático izquierda y derecha para centrar */
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 10px;
-    background-color: rgba(255, 227, 185, 0.9);
-    border: 1px solid #ff9939;
+    background-color: rgba(247, 247, 247, 0.95);
+    border: 5px solid #A0BFE0;
 }
 
-h2{
+h2 {
     font-weight: 600;
+    color: #42627f;
 }
 
 input,

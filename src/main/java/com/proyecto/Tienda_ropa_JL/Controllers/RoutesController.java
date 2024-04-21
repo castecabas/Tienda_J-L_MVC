@@ -15,7 +15,7 @@ import com.proyecto.Tienda_ropa_JL.Models.Repositories.ProductRepository;
 import com.proyecto.Tienda_ropa_JL.Models.Repositories.SaleRepository;
 
 @Controller
-@RequestMapping({"/Tienda","/",""})
+@RequestMapping({ "/Tienda", "/", "" })
 public class RoutesController {
     /* Aqui se pondran todo las rutas entre paginas */
 
@@ -64,14 +64,14 @@ public class RoutesController {
     @GetMapping("/store")
     public String Logeado(Model model) {
 
-        if (cliente.getConectado() == true) {
-            products = R_Product.findAll();
+        if (cliente == null || !cliente.getConectado()) {
+            return "redirect:/Tienda";
+        } else {
             cliente = R_Client.findByCorreoAndContrasena(cliente.getCorreo(), cliente.getContrasena());
+            products = R_Product.findAll();
             model.addAttribute("product", products);
             model.addAttribute("cliente", cliente);
             return "Index";
-        } else {
-            return "redirect:/Tienda";
         }
     }
 

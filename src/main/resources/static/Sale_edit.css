@@ -6,9 +6,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('https://i.pinimg.com/originals/ec/df/7b/ecdf7b1744bb19cc42f1f8a7fc3b29e2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: rgb(74, 85, 162);
+    background: linear-gradient(90deg, rgba(74, 85, 162, 1) 0%, rgba(106, 130, 191, 1) 63%, rgba(175, 203, 255, 1) 100%);
     font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
 }
 
@@ -23,8 +22,8 @@ div.container {
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 10px;
-    background-color: rgba(255, 227, 185, 0.9);
-    border: 1px solid #ff9939;
+    background-color: #f7f7f7f2;
+    border: 5px solid #A0BFE0;
 }
 
 textarea#descripcion_imp {
@@ -33,8 +32,9 @@ textarea#descripcion_imp {
     max-height: 150px;
 }
 
-h2{
+h2 {
     font-weight: 600;
+    color: #42627f;
 }
 
 form label {
