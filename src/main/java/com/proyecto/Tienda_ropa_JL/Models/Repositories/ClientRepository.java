@@ -11,6 +11,8 @@ import com.proyecto.Tienda_ropa_JL.Models.Entities.Client;
 public interface ClientRepository extends JpaRepository<Client, Long> {
 
     Client findByCorreoAndContrasena(String correo, String contrasena);
+    
+    Client findByCorreo(String correo);
 
     List<Client> findByRol(String rol);
 }

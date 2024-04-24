@@ -35,6 +35,9 @@ public class ClientController {
 
     @PostMapping("/crearCliente")
     public String crearcliente(@ModelAttribute Client Newclient) {
+        
+
+
         R_Client.save(Newclient);
         enviarCorreo(Newclient.getCorreo(),Newclient.getNombre(),Newclient.getApellido());
         return "redirect:/Tienda/InicioSesion";
