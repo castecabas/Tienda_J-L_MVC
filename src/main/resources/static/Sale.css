@@ -21,7 +21,7 @@ div.container {
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 10px;
-    background-color: #ffeff2;
+    background-color: white;
     border: 5px solid #B958A5;
 }
 
@@ -37,6 +37,18 @@ label {
     color: black;
 }
 
+input,
+select,
+textarea{
+    border:1px solid rgb(228, 228, 228);
+    color: black;
+    background-color: #ffeff2;
+}
+
+input.form-check-input {
+    background-color: #ddaaff;
+    border: 1px solid black;
+}
 
 form label {
     padding-left: 15px;

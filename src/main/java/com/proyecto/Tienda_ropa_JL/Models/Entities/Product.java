@@ -1,6 +1,9 @@
 package com.proyecto.Tienda_ropa_JL.Models.Entities;
 
 import java.math.BigDecimal;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,6 +16,7 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false)
     private String nombre;
     private BigDecimal precio;
@@ -21,4 +25,5 @@ public class Product {
     private Integer stock;
     private Integer descuento;
     private String urlimage;
+
 }

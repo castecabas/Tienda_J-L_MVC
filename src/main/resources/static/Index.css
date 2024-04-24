@@ -4,11 +4,11 @@ html {
 
 body {
     font-family: 'Montserrat', 'Lato', 'Playfair Display', 'Roboto', 'Avenir', sans-serif;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
 }
 
 nav {
-    background-color: #ffd0d8;
+    background-color: rgb(255, 208, 216);
     padding-left: 200px;
     padding-right: 200px;
 }
@@ -42,6 +42,8 @@ div#carrusel_IMG div img {
     aspect-ratio: 16/9;
     align-self: center;
     object-fit: fill;
+    background-color: white;
+
 }
 
 #Busqueda_text{
@@ -67,6 +69,14 @@ div#carrusel_IMG div img {
     width: 300px;
     border: 0;
     background-color: transparent;
+    border: #ffd0d8 solid 1px;
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(255, 208, 216, 0.8);
+    transform: translateY(-2%);
 }
 
 #img_product {
@@ -75,13 +85,12 @@ div#carrusel_IMG div img {
     max-width: 300px;
     max-height: 350px;
     aspect-ratio: 9/16;
-
-
+    padding: 40px;
 }
 
 .card-body{
     background-color: #ffe9ee;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     
 }
@@ -111,6 +120,10 @@ footer .foot {
     background-color: rgb(255, 208, 216);
     height: 170px;
     justify-content: center;
+}
+
+footer h3 {
+    color: #911710;
 }
 
 footer .foot li {

@@ -46,4 +46,5 @@ public class ProductController {
         }
         return "redirect:/Tienda/Administracion?error=producto_no_encontrado";
     }
+
 }

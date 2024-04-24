@@ -30,7 +30,12 @@
       <li class="nav-item">
         <img id="img_logo" srcset="https://i.postimg.cc/0Q5Q68Vj/Logo.webp">
       </li>
-
+      <li>
+        <a href="#" disabled>
+          <lord-icon src="https://cdn.lordicon.com/pbrgppbb.json" trigger="hover" colors="primary:#911710">
+          </lord-icon>
+        </a>
+      </li>
       <li>
         <a href="/Tienda/Perfil">
           <lord-icon src="https://cdn.lordicon.com/hrjifpbq.json" trigger="hover" colors="primary:#911710">
@@ -55,10 +60,13 @@
               <img src="https://i.postimg.cc/0NbDz0jh/Carrusel-A.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-              <img src="https://i.postimg.cc/mgFThcR8/Carrusel-B.jpg" class="d-block w-100">
+              <img src="https://i.postimg.cc/sXxqdxpd/Carrusel-B.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
               <img src="https://i.postimg.cc/Y0VJw34k/Carrusel-C.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="https://i.postimg.cc/bw8zX0r7/Carrusel-E.jpg" class="d-block w-100">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carrusel_IMG" data-bs-slide="prev">
@@ -96,7 +104,7 @@
               Talla: <span th:text="${product.Talla}"></span><br>
               Marca: <span th:text="${product.Marca}"></span><br>
               Stock: <span th:text="${product.Stock}"></span><br>
-              Descuento (%): <span th:text="${product.Descuento}"></span>
+              Descuento (%): <span th:text="${product.Descuento}"></span><br>
             </p>
           </div>
         </div>
@@ -109,13 +117,29 @@
       <li>
         <h3>Sobre nosotros</h3>
         Somos una empresa pequeña <br>
-        que trae productos economicos y calidad
+        que trae productos de calidad <br>
+        con precios increibles
       </li>
       <li>
         <h3>Contacto</h3>
-        Nuestra dirección: Cl 18#25-33<br>
-        Teléfono: 634-1269871<br>
-        correo: TiendaJ&L@gmail.com
+        <img src="https://cdn-icons-png.freepik.com/256/232/232587.png?semt=ais_hybrid"
+          style="height: 15px; width: 15px;"> Cl 18#25-33<br>
+        <lord-icon src="https://cdn.lordicon.com/srsgifqc.json" trigger="in" delay="500" state="in-phone 2"
+          style="width:15px;height:15px">
+        </lord-icon> 634-1269871<br>
+        <lord-icon src="https://cdn.lordicon.com/xtzvywzp.json" trigger="in" delay="500" style="width:15px;height:15px">
+        </lord-icon> TiendaJ&L@gmail.com
+      </li>
+      <li>
+        <h3>Redes Sociales</h3>
+        <a class="btn btn-none"> <img src="https://cdn-icons-png.flaticon.com/256/20/20673.png"
+            style="height: 30px;width: 30px;"></a>
+        <a class="btn btn-none"><img src="https://cdn-icons-png.flaticon.com/512/87/87390.png"
+            style="height: 30px;width: 30px;"></a>
+        <a class="btn btn-none"><img
+            src="https://seeklogo.com/images/T/twitter-x-logo-19D2657BAA-seeklogo.com.png?v=638258862870000000"
+            style="height: 30px;width: 30px;"></a>
+
       </li>
       <li>
         <h3>Librerias</h3>

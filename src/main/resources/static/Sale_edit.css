@@ -22,7 +22,7 @@ div.container {
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 10px;
-    background-color: #f7f7f7f2;
+    background-color: white;
     border: 5px solid #A0BFE0;
 }
 
@@ -30,6 +30,12 @@ textarea#descripcion_imp {
     width: 200px;
     height: auto;
     max-height: 150px;
+}
+
+form input,textarea{
+    border:1px solid rgb(247, 247, 247);
+    color: black;
+    background-color: #ebedf2;
 }
 
 h2 {

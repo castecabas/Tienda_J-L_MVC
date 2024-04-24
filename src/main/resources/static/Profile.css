@@ -21,7 +21,7 @@ div.container {
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 10px;
-    background-color: #F2F1EB;
+    background-color: white;
     border: 5px solid #EEE7DA;
 }
 
@@ -30,8 +30,15 @@ form label {
     font-weight: 550;
 }
 
+form input{
+    border:1px solid rgb(228, 228, 228);
+    color: black;
+    background-color: #F2F1EB;
+}
+
 h2 {
     font-weight: 600;
+    color: rgb(65, 107, 73);
 }
 
 div#errorMessage {

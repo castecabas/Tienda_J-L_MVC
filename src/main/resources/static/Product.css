@@ -21,7 +21,7 @@ div.container {
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 10px;
-    background-color: #ffeff2;
+    background-color: white;
     border: 5px solid #B958A5;
 }
 
@@ -32,6 +32,10 @@ h2 {
 
 input,
 select {
+    border:1px solid rgb(228, 228, 228);
+    color: black;
+    background-color: #ffeff2;
+
     width: 200px;
     text-align: center;
 }

@@ -1,5 +1,7 @@
 package com.proyecto.Tienda_ropa_JL.Models.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,4 +24,5 @@ public class Client {
     private String contrasena;
     private String rol = "Cliente";
     private Boolean conectado = false;
+
 }
