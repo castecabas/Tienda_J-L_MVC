@@ -35,23 +35,27 @@ public class ClientController {
 
     @PostMapping("/crearCliente")
     public String crearcliente(@ModelAttribute Client Newclient) {
-        
-
+        if (R_Client.findByCorreo(Newclient.getCorreo()) != null) {
+            return "redirect:/Tienda/registrar?error=emailExiste";
+        }
 
         R_Client.save(Newclient);
-        enviarCorreo(Newclient.getCorreo(),Newclient.getNombre(),Newclient.getApellido());
+        enviarCorreo(Newclient.getCorreo(), Newclient.getNombre(), Newclient.getApellido());
         return "redirect:/Tienda/InicioSesion";
     }
 
-    private void enviarCorreo(String destinatario,String NombreUser, String ApellidoUser) {
+    private void enviarCorreo(String destinatario, String NombreUser, String ApellidoUser) {
         MimeMessage msg = javaMailSender.createMimeMessage();
         try {
             MimeMessageHelper helper = new MimeMessageHelper(msg, true);
             helper.setFrom("cardenas20220113@gmail.com");
             helper.setTo(destinatario);
             helper.setSubject("Bienvenido a nuestra tienda");
-            helper.setText("<img src='https://i.postimg.cc/dt84bCch/Logo-With-Backgorund.png' style='width:100px;height:100px;'><br>"+"Se ha creado el USUARIO: <h3>"+NombreUser+" "+ ApellidoUser+"</h3> Con el CORREO: <h3>"+destinatario+"</h3><br>"
-                    +" Gracias por registrarte en nuestra tienda !! , te damos la bienvenida y puedas otorgar apoyo en nuestra pagina"
+            helper.setText(
+                    "<img src='https://i.postimg.cc/dt84bCch/Logo-With-Backgorund.png' style='width:100px;height:100px;'><br>"
+                            + "Se ha creado el USUARIO: <h3>" + NombreUser + " " + ApellidoUser
+                            + "</h3> Con el CORREO: <h3>" + destinatario + "</h3><br>"
+                            + " Gracias por registrarte en nuestra tienda !! .Te damos la BIENVENIDA y puedas otorgar apoyo en nuestra pagina"
                             + "<br><img src='https://www.ampsico.es/wp-content/uploads/2018/05/1.png'>",
                     true);
 
